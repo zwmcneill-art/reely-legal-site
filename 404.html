@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Reely</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .error-page {
+      display:        flex;
+      flex-direction: column;
+      align-items:    center;
+      justify-content:center;
+      text-align:     center;
+      padding:        80px 24px;
+      min-height:     60vh;
+      gap:            16px;
+    }
+
+    .error-code {
+      font-size:      96px;
+      font-weight:    900;
+      letter-spacing: -4px;
+      line-height:    1;
+      color:          var(--surface-high);
+    }
+
+    .error-title {
+      font-size:      28px;
+      font-weight:    800;
+      letter-spacing: -0.5px;
+      color:          var(--text);
+      margin-top:     8px;
+    }
+
+    .error-desc {
+      font-size:  16px;
+      color:      var(--text-dim);
+      max-width:  400px;
+      line-height:1.6;
+    }
+
+    .error-home {
+      display:         inline-block;
+      margin-top:      8px;
+      padding:         12px 28px;
+      background:      var(--accent);
+      color:           #fff;
+      font-size:       15px;
+      font-weight:     700;
+      border-radius:   var(--radius-md);
+      text-decoration: none;
+      transition:      opacity 0.15s;
+    }
+
+    .error-home:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <span class="nav-brand-emoji">🎬</span>
+        <span>Reely</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="error-page">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page not found</h1>
+    <p class="error-desc">
+      The page you&rsquo;re looking for doesn&rsquo;t exist or has been moved.
+    </p>
+    <a class="error-home" href="index.html">Go to Home</a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><span>Reely</span></div>
+      <nav class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <p class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Reely. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

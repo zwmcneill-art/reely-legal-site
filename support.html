@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Reely</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+  <style>
+    /* Support-page-specific additions */
+    .step-list {
+      display:        flex;
+      flex-direction: column;
+      gap:            12px;
+      margin-top:     16px;
+    }
+
+    .step {
+      display:       flex;
+      gap:           16px;
+      align-items:   flex-start;
+      background:    var(--card);
+      border:        1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding:       16px 20px;
+    }
+
+    .step-num {
+      width:           28px;
+      height:          28px;
+      border-radius:   50%;
+      background:      var(--accent-dim);
+      border:          1px solid var(--accent-border);
+      color:           var(--accent-soft);
+      font-weight:     800;
+      font-size:       13px;
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      flex-shrink:     0;
+      margin-top:      1px;
+    }
+
+    .step-body { flex: 1; }
+    .step-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .step-desc  { font-size: 13px; color: var(--text-dim); line-height: 1.55; }
+
+    .topic-grid {
+      display:               grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap:                   12px;
+      margin-top:            16px;
+    }
+
+    .topic-card {
+      background:     var(--card);
+      border:         1px solid var(--border);
+      border-radius:  var(--radius-lg);
+      padding:        18px 20px;
+    }
+
+    .topic-icon  { font-size: 24px; margin-bottom: 10px; }
+    .topic-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .topic-desc  { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+    .topic-desc a { color: var(--accent-soft); text-decoration: none; }
+    .topic-desc a:hover { color: var(--accent-pale); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <span class="nav-brand-emoji">🎬</span>
+        <span id="nav-app-name">Reely</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <header class="page-header">
+      <span class="page-label">Help</span>
+      <h1 class="page-title">Support</h1>
+      <p class="page-subtitle">
+        We&rsquo;re a small team and we read every message. If something&rsquo;s wrong or
+        you have a question, we want to hear from you.
+      </p>
+    </header>
+
+    <!-- Primary contact -->
+    <section class="section">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-body">
+          <p class="contact-label">Support email</p>
+          <a class="contact-email" id="contact-email-main" href="mailto:reelysupport@gmail.com">reelysupport@gmail.com</a>
+          <p class="contact-note">
+            We aim to respond within 2 business days. Please include your device type,
+            app version, and a description of the issue.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- How to get help -->
+    <section class="section">
+      <p class="section-label">Guidance</p>
+      <h2 class="section-title">How to Get Help</h2>
+      <p>
+        For the fastest resolution, follow these steps when contacting support:
+      </p>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Describe the problem clearly</div>
+            <div class="step-desc">
+              Tell us what you were trying to do, what happened, and what you expected to happen.
+              Screenshots are always helpful.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Include your app version</div>
+            <div class="step-desc">
+              You can find the app version in <strong>Settings → Account Details → App version</strong>.
+              This helps us diagnose version-specific issues.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Include your device type</div>
+            <div class="step-desc">
+              Let us know your device model and operating system version
+              (e.g. iPhone 15 Pro, iOS 18.1).
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Send to <span id="contact-email-step">reelysupport@gmail.com</span></div>
+            <div class="step-desc">
+              Email us with the subject line starting with the issue type — for example:
+              <em>"[Bug] Session screen crashes"</em> or <em>"[Question] How do I delete a viewer?"</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Common topics -->
+    <section class="section">
+      <p class="section-label">Common Topics</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="topic-grid">
+        <div class="topic-card">
+          <div class="topic-icon">📡</div>
+          <div class="topic-title">Streaming services show no results</div>
+          <div class="topic-desc">
+            Make sure your streaming services are selected in <strong>Settings → Streaming Services</strong>.
+            If you see a loading spinner that never resolves, try closing and reopening the app.
+          </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">👥</div>
+          <div class="topic-title">How do I add a viewer?</div>
+          <div class="topic-desc">
+            Go to the <strong>Viewers</strong> tab and tap the <strong>+ Add</strong> button.
+            Each viewer profile stores individual genre and content preferences.
+          </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">🎯</div>
+          <div class="topic-title">Recommendations don&rsquo;t match our taste</div>
+          <div class="topic-desc">
+            Make sure each viewer&rsquo;s genre preferences are filled in under their profile.
+            Mark watched titles with a reaction &mdash; your feedback helps shape future recommendations.
+          </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">🔒</div>
+          <div class="topic-title">I can&rsquo;t log in</div>
+          <div class="topic-desc">
+            If you&rsquo;ve forgotten your password or can&rsquo;t get in,
+            email us and we&rsquo;ll help you regain access.
+          </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">🎬</div>
+          <div class="topic-title">A title says it&rsquo;s on a service but it&rsquo;s not</div>
+          <div class="topic-desc">
+            Streaming availability changes frequently. Content data comes from a third-party provider
+            and may not reflect same-day changes. If you notice repeated errors, let us know.
+          </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">📊</div>
+          <div class="topic-title">Viewing stats look wrong</div>
+          <div class="topic-desc">
+            Stats are calculated from your watch history. Make sure you&rsquo;re marking
+            titles as watched after sessions. Your viewing activity is summarised under
+            <strong>Settings → Viewing Stats</strong>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Bug reports -->
+    <section class="section">
+      <p class="section-label">Bugs</p>
+      <h2 class="section-title">Reporting a Problem</h2>
+      <p>
+        If you&rsquo;ve found a bug — something that crashes, behaves unexpectedly, or
+        looks broken — please send us a bug report. Include:
+      </p>
+      <ul class="data-list">
+        <li>
+          <span class="data-icon">📝</span>
+          <span class="data-text">
+            <strong>Steps to reproduce</strong> — exactly what you tapped or did before the issue occurred.
+          </span>
+        </li>
+        <li>
+          <span class="data-icon">📱</span>
+          <span class="data-text">
+            <strong>Device and OS version</strong> — e.g. iPhone 13 Mini, iOS 17.4.
+          </span>
+        </li>
+        <li>
+          <span class="data-icon">🔢</span>
+          <span class="data-text">
+            <strong>App version</strong> — found in Settings → Account Details → App version.
+          </span>
+        </li>
+        <li>
+          <span class="data-icon">🖼️</span>
+          <span class="data-text">
+            <strong>Screenshots or screen recording</strong> — if possible. A picture is
+            worth a thousand words.
+          </span>
+        </li>
+      </ul>
+      <p style="margin-top:16px">
+        Send bug reports to <a id="contact-email-bug" href="mailto:reelysupport@gmail.com"
+          style="color:var(--accent-soft)">reelysupport@gmail.com</a> with the subject line
+        starting with <em>[Bug]</em>.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Account deletion -->
+    <section class="section">
+      <p class="section-label">Account</p>
+      <h2 class="section-title">Account Deletion Help</h2>
+      <p>
+        You can delete your account directly from within the Reely app:
+      </p>
+      <ul class="data-list">
+        <li>
+          <span class="data-icon">1️⃣</span>
+          <span class="data-text">Open the app and go to <strong>Settings</strong>.</span>
+        </li>
+        <li>
+          <span class="data-icon">2️⃣</span>
+          <span class="data-text">Scroll to the <strong>Danger Zone</strong> section.</span>
+        </li>
+        <li>
+          <span class="data-icon">3️⃣</span>
+          <span class="data-text">Tap <strong>Delete Account</strong>.</span>
+        </li>
+        <li>
+          <span class="data-icon">4️⃣</span>
+          <span class="data-text">
+            Review what will be deleted, type <strong>DELETE</strong> to confirm,
+            and tap <strong>Delete My Account</strong>.
+          </span>
+        </li>
+      </ul>
+      <p style="margin-top:16px">
+        Deletion permanently removes your account and all associated data. This cannot be
+        reversed. If you&rsquo;re having trouble deleting your account from within the app,
+        email us and we will assist you.
+      </p>
+      <div class="note-card">
+        For a full list of what is deleted when you delete your account, see our
+        <a href="privacy.html" style="color:var(--accent-pale);font-weight:600">Privacy Policy</a>
+        under &ldquo;Data Retention and Account Deletion.&rdquo;
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><span id="footer-app-name">Reely</span></div>
+      <nav class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <p class="footer-copy" id="footer-copy"></p>
+    </div>
+  </footer>
+
+  <script>
+    const r = window.REELY;
+    document.title = 'Support — ' + r.APP_NAME;
+    document.getElementById('nav-app-name').textContent    = r.APP_NAME;
+    document.getElementById('footer-app-name').textContent = r.APP_NAME;
+    document.getElementById('footer-copy').textContent     =
+      '© ' + new Date().getFullYear() + ' ' + r.APP_NAME + '. All rights reserved.';
+
+    const email = r.SUPPORT_EMAIL;
+    document.getElementById('contact-email-step').textContent = email;
+
+    ['contact-email-main','contact-email-bug'].forEach(function(id) {
+      var el = document.getElementById(id);
+      el.href        = 'mailto:' + email;
+      el.textContent = email;
+    });
+  </script>
+</body>
+</html>
